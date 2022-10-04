@@ -1,3 +1,6 @@
+from ossaudiodev import SOUND_MIXER_TREBLE
+
+
 class Product:  # Es una clase para la base de datos
     def __init__(self, food_id: str, name: str,
                  price: float, food_description: str) -> None:
@@ -53,14 +56,22 @@ class Food_basket:
 class Basket():
     def __init__(self) -> None:
         self.Food_basket = []
+        self.product_name = ""
+        self.quantity = 0
 
     def total_busket(self):
         '''retorna el valor total de los productos en la canasta'''
         pass
 
-    def add_food(self, product_id: str, quantity: int):
+    # def add_food(self, product_id: str, quantity: int):
+    def add_food(self):
         '''añade el producto a la canasta'''
-        pass
+        print("Introducir nombre de la comida")
+        self.product_name = str(input())
+        print("Cantidad")
+        self.quantity = int(input())
+        self.Food_basket.append(self.product_name)
+        
 
     def remove_food(self, Food_basket):
         '''elimina el producto de la canasta'''
