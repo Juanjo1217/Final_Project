@@ -29,13 +29,13 @@ class Food:
 
 class comission:
     def __init__(self, food_id: str, Total_buy: float, User_name: str,
-                buyer_mail: str, buyer_phone: str, commissionId: str ) -> None:
+                buyer_mail: str, buyer_phone: str, commission_id: str ) -> None:
         self.food_id = food_id
         self.Total_buy = Total_buy
         self.User_name = User_name
         self.buyer_mail = buyer_mail
         self.buyer_phone = buyer_phone
-        self.commissionId = commissionId
+        self.commission_id = commission_id
 
     def Status(self):
         '''Modifica el estado del orden en la base datos, si esta enviado o no'''
