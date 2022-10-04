@@ -1,6 +1,3 @@
-from ossaudiodev import SOUND_MIXER_TREBLE
-
-
 class Product:  # Es una clase para la base de datos
     def __init__(self, food_id: str, name: str,
                  price: float, food_description: str) -> None:
