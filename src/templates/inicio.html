@@ -1,7 +1,19 @@
 {% extends './base.html' %}
 
 {% block title %} Homepage {% endblock %}
+{%block head%}
+<style>
+    .container{
+        background-color: khaki;
+        height: 100vh;
+        margin: 5%;
 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+{%endblock%}
 {%block body%}
 <h1>Bienvenido</h1>
 {%endblock%}
