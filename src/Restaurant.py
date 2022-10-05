@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 from sqlite3 import connect
 
 
+=======
+>>>>>>> 7ee4f90036c4d7ce76c59d5fa6bcb55c6550948d
 class Product:  # Es una clase para la base de datos
     def __init__(self, food_id: str, name: str,
                  price: float, food_description: str) -> None:
