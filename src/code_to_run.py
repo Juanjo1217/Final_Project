@@ -1,14 +1,9 @@
-#%%
-from Restaurant import Product
 
+from Restaurant import Basket
 
-spaghetti = Product("food#01", "Spaghetti", "12000","Un espaguete que está bueno")
-# %%
-spaghetti.food_id
-# %%
-spaghetti.name
-# %%
-spaghetti.price
-# %%
-spaghetti.food_description
-# %%
+basket1 = Basket()
+
+basket1.add_food()
+basket1.add_food()
+basket1.add_food()
+print(basket1.Food_basket)
