@@ -1,4 +1,4 @@
-from ossaudiodev import SOUND_MIXER_TREBLE
+from sqlite3 import connect
 
 
 class Product:  # Es una clase para la base de datos
@@ -78,5 +78,40 @@ class Basket():
         pass
 
 
+class User():
+    User_number = 0
+    def __init__(self, email: str, password: str) -> None:
+        self.email = email
+        self.password = password
 
+        self.connected = False
+        self.attemps = 3
+        User.User_number += 1
 
+    def connect(self):
+        mypassword = input("ingresa la contraseña: ")
+        if mypassword == self.password:
+            print("conectado exitosamente!")
+            self.coneccted = True
+        else:
+            self.attemps -= 1
+            if self.attemps > 0:
+                print("contraseña incorrecta, intentelo de nuevo ")
+                print("te quedan " , self.attemps , " intentos")
+                self.connect()
+            else:
+                print("superaste los maximos intentos, intentalo mas tarde.")
+
+    def disconnect(self):
+        if self.connect:
+            print("secion cerrado exitosamente.")
+            self.connected = False
+        else:
+            print("Error, secion no iniciada")
+
+    def __repr__(self):
+        if self.connect:
+            conect = "conectado"
+        else:
+            conect = "no conectado, verifique sus valores"
+        return conect
